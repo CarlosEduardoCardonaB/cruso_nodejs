@@ -20,8 +20,8 @@ function multArraypor2(arramulti){
     // console.log("Array original "+ arramulti);
 }
 
-//convierte una matriz de objetos a una matriz de array
 
+//convierte una matriz de objetos a una matriz de array
 function convertArrayObj (){
     let people = [
         {firstName:"Pepito", lastName: "Perez"},
