@@ -1,6 +1,7 @@
 
 //import express from 'express';
 const express = require('express');
+const requestIp = require('request-ip');
 
 const app = express();
 
@@ -10,11 +11,11 @@ const port = "8080";
 //app.use(express().json());
 
 app.get('/', (request, response)=>{
-    const ip = 
-    request.headers['cf-connecting-ip']
-    || request.headers['x-real-ip']
-    || request.headers['x-forwared-for'] 
-    || request.socket.remoteAddress || '';
+    const ip = request.socket.remoteAddress;
+    // request.headers['cf-connecting-ip']
+    // || request.headers['x-real-ip']
+    // || request.headers['x-forwared-for'] 
+    // || request.socket.remoteAddress || '';
 
 
     return response.json({
